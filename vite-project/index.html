@@ -1,13 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Számológép</h1>
+
+        <label for="num1">Első szám:</label>
+        <input type="number" id="num1" placeholder="Első szám">
+
+        <label for="num2">Második szám:</label>
+        <input type="number" id="num2" placeholder="Második szám">
+
+        <label for="operation">Művelet:</label>
+        <select id="operation">
+            <option value="+">Összeadás (+)</option>
+            <option value="-">Kivonás (-)</option>
+            <option value="*">Szorzás (*)</option>
+            <option value="/">Osztás (/)</option>
+        </select>
+
+        <button onclick="calculateResult()">Számol</button>
+
+        <h2>Eredmény:</h2>
+        <input type="text" id="result" disabled />
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
 </html>
